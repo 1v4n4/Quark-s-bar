@@ -1,87 +1,55 @@
+import makeMain from "./modules/home";
+import { makeHeader, makeFooter } from "./modules/restaurant";
+
 const mother= document.getElementById("content");
 mother.className = 'bg-dark';
 
-// Header
+const cardContainer = document.createElement("article");
+cardContainer.className = 'container-md d-flex';
 
-function createTab(name) {
-  const tab = document.createElement('button');
-  tab.className = 'btn btn-dark m-3 text-warning fw-bold active fs-2';
-  const tabText = document.createTextNode(name);
-  tab.appendChild(tabText);
-  return tab;
+const makeCard = (src, title, text) => {
+  const card = document.createElement('div');
+  card.className = 'card card-width  bg-warning m-5';
+ console.log(title)
+  const cardImg = document.createElement('img');
+  cardImg.src = src
+  cardImg.className = 'card-img-top';
+
+  card.appendChild(cardImg);
+
+  const cardBody = document.createElement('div');
+  cardBody.className = 'card-body';
+
+  const cardTitle = document.createElement('h5');
+  cardTitle.className = 'fw-bold text-center text-dark text-warning';
+  const cardTitleText = document.createTextNode(title);
+  cardTitle.appendChild(cardTitleText);
+
+  cardBody.appendChild(cardTitle);
+
+  const cardText = document.createElement('p');
+  cardText.className = 'card-text text-center fw-bold text-dark';
+  const cardTextText = document.createTextNode(text);
+  cardText.appendChild(cardTextText);
+
+  cardBody.appendChild(cardText);
+  console.log(cardText)
+
+  card.appendChild(cardBody);
+
+  return card;
 }
 
-const header = document.createElement('header');
-header.classList.add('d-flex', 'bg-dark', 'justify-content-center', 'p-2');
-header.appendChild(createTab("Home"))
-header.appendChild(createTab("Menu"))
-header.appendChild(createTab("About"))
-mother.appendChild(header);
+makeHeader();
+// makeMain()
+
+mother.appendChild(cardContainer)
+
+cardContainer.appendChild(makeCard('./images/pudding.jpg','I\'danian spice pudding', 'A rich and delicious dessert, white with a creme top, a favorite at the Replimat on Deep Space 9\'s Promenade.'));
+cardContainer.appendChild(makeCard('./images/tube-grubs.png', 'Tube grubs', 'Ferengi\'s delicacy is usually eaten alive, though they could also be minced or fried. Fresh tube grubs are preferred cold.'));
+cardContainer.appendChild(makeCard('./images/steak.png','Steak', 'An ancient Human delicacy is a very simple dish - grilled meat (on Earth, usually beef), usually with vegetables aside.'));
+cardContainer.appendChild(makeCard('./images/hasperat.png','Bajoran hasperat', 'Well-known spicy food resembling a burrito. Specially prepared brine,  if made correctly would cause the eyes to water and sear the tongue. '));
+
+makeFooter();
 
 
-//main
-const homeDiv = document.createElement('div')
-homeDiv.className = 'homeDiv container-md pt-5'
-const h1 = document.createElement('h1')
-h1.className = 'text-center text-warning mb-4 mt-3'
-const h1Text =document.createTextNode("Quark's Bar")
-h1.appendChild(h1Text)
-homeDiv.appendChild(h1)
-
-
-const p1 = document.createElement('p')
-p1.className = 'text-center text-dark fw-bold fst-italic fs-3 p1';
-const span = document.createElement('span')
-const spanText = document.createTextNode("Open 26 hours a day")
-span.appendChild(spanText);
-span.className = 'bg-warning p-2';
-p1.appendChild(span)
-homeDiv.appendChild(p1)
-
-const quoteDiv = document.createElement('div')
-quoteDiv.className = 'd-flex justify-content-center my-5'
-
-const quote = document.createElement('p')
-quote.className = 'text-center text-warning fw-bold mt-5 me-3 fst-italic quote';
-const quoteText = document.createTextNode('\"A suit of the finest Andorian silk? A ring of pure Surax? A complete set of Tanesh pottery? How about a latinum plated bucket to sleep in?\"')
-quote.appendChild(quoteText)
-mother.appendChild(homeDiv)
-
-const quarkImg = document.createElement('img')
-quarkImg.src ='./images/quark.jpg'
-quarkImg.className = 'rounded-circle ms-3 quark'
-
-quoteDiv.appendChild(quote)
-quoteDiv.appendChild(quarkImg)
-
-const main = document.createElement('article')
-main.appendChild(homeDiv)
-main.appendChild(quoteDiv)
-
-mother.appendChild(main)
-
-// Footer
-
-function makeLink() {
-  const link = document.createElement("a");
-  link.href = "https://github.com/1v4n4";
-  link.className =' text-warning';
-  const linkText = document.createTextNode("1v4n4");
-  link.appendChild(linkText)
-  return link;
-}
-
-const footer = document.createElement('footer');
-footer.className = 'bg-dark';
-const footerP = document.createElement('p');
-footerP.className = "fw-bold fs-5 text-warning text-center pt-4";
-const footerText = document.createTextNode('Made by ');
-footerP.appendChild(footerText);
-
-footerP.appendChild(makeLink())
-
-const footerText2 = document.createTextNode('  © 2021');
-footerP.appendChild(footerText2)
-
-footer.appendChild(footerP)
- mother.appendChild(footer)

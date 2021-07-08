@@ -43,3 +43,7 @@ h1 {
 .link-unstyled {
   text-decoration: none;
 }
+
+.card-width {
+  width: 18rem;
+}
