@@ -19,7 +19,7 @@ function makeAboutCard(title, text) {
   aboutCardText.appendChild(aboutCardTextText);
 
   aboutCardBody.appendChild(aboutCardText);
-  return aboutCardBody
+  return aboutCardBody;
 }
 
 function makeAbout() {

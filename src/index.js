@@ -1,52 +1,88 @@
 import makeMain from './modules/home';
-import { makeHeader, makeFooter } from './modules/restaurant';
+//import { MakeHeader, makeFooter } from './modules/restaurant';
 import makeMenu from './modules/menu';
 import makeAbout from './modules/about';
 
-
-const button = document.getElementsByTagName('button');
-
-const mother= document.getElementById("content");
+const mother = document.getElementById("content");
 mother.className = 'bg-dark';
 
 function homeToDom() {
-  makeHeader();
+  MakeHeader();
   makeMain();
   makeFooter();
 }
 
-function menuToDom() {
-  makeHeader();
-  makeMenu();
-  makeFooter();
+const MakeTab = (name, id) => {
+  const tab = document.createElement('button');
+  tab.setAttribute('id',id);
+  tab.className = 'btn btn-dark m-3 text-warning fw-bold active fs-2';
+  const tabText = document.createTextNode(name);
+  tab.appendChild(tabText);
+  return tab;
 }
 
-function aboutToDom() {
-  makeHeader();
-  makeAbout();
-  makeFooter();
+const MakeHeader = () => {
+  const header = document.createElement('header');
+  header.classList.add('d-flex', 'bg-dark', 'justify-content-center', 'p-2');
+  header.appendChild(MakeTab("Home", "home"));
+  header.appendChild(MakeTab("Menu", "menu"));
+  header.appendChild(MakeTab("About", "about"));
+  mother.appendChild(header);
+  const homeBtn = document.getElementById('home');
+  const menuBtn = document.getElementById('menu');
+  const aboutBtn = document.getElementById('about');
+
+  homeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    mother.innerHTML ='';
+    homeToDom();
+  });
+
+  menuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    mother.innerHTML ='';
+    MakeHeader();
+    makeMenu();
+    makeFooter();
+  });
+
+  aboutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    mother.innerHTML ='';
+    MakeHeader();
+    makeAbout();
+    makeFooter();
+  });
+}
+
+function makeLink() {
+  const link = document.createElement("a");
+  link.href = "https://github.com/1v4n4";
+  link.className =' text-warning';
+  const linkText = document.createTextNode("1v4n4");
+  link.appendChild(linkText)
+  return link;
+}
+
+const makeFooter = () => {
+  const footer = document.createElement('footer');
+  footer.className = 'bg-dark';
+  const footerP = document.createElement('p');
+  footerP.className = "fw-bold fs-5 text-warning text-center pt-4";
+  const footerText = document.createTextNode('Made by ');
+  footerP.appendChild(footerText);
+
+  footerP.appendChild(makeLink());
+
+  const footerText2 = document.createTextNode('  © 2021');
+  footerP.appendChild(footerText2);
+
+  footer.appendChild(footerP);
+  mother.appendChild(footer);
 }
 
 document.addEventListener('DOMContentLoaded', homeToDom());
 
-console.log("her");
 
-button[0].addEventListener('click', (e) => {
-  e.preventDefault();
 
- console.log("here");
 
-//   const home = button[0].value;
-//   const menu = button[1].value;
-//   const about = button[2].value;
-
-// console.log("here")
-//   switch(button) {
-//    case button[0]:
-//     homeToDom();
-//    case button[1]:
-//     menuToDom();
-//     case button[2]:
-//       aboutToDom();
-//   }
- })

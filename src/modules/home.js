@@ -44,7 +44,6 @@ function makeMain() {
   main.appendChild(homeDiv);
   main.appendChild(quoteDiv);
 
-
   mother.appendChild(main);
 }
 

@@ -1,9 +1,6 @@
 const mother= document.getElementById("content");
 mother.className = 'bg-dark';
 
-const cardContainer = document.createElement("article");
-cardContainer.className = 'container-md d-flex flex-wrap justify-content-center';
-
 const makeCard = (src, title, text) => {
   const card = document.createElement('div');
   card.className = 'card card-width  bg-warning m-5';
@@ -38,6 +35,8 @@ const makeCard = (src, title, text) => {
 }
 
 function makeMenu() {
+  const cardContainer = document.createElement("article");
+  cardContainer.className = 'container-md d-flex flex-wrap justify-content-center';
   cardContainer.appendChild(makeCard('./images/pudding.jpg','I\'danian spice pudding', 'A rich and delicious dessert, white with a creme top, a favorite at the Replimat on Deep Space 9\'s Promenade.'));
   cardContainer.appendChild(makeCard('./images/tube-grubs.png', 'Tube grubs', 'Ferengi\'s delicacy is usually eaten alive, though they could also be minced or fried. Fresh tube grubs are preferred cold.'));
   cardContainer.appendChild(makeCard('./images/steak.png','Steak', 'An ancient Human delicacy is a very simple dish - grilled meat (on Earth, usually beef), usually with vegetables aside.'));
