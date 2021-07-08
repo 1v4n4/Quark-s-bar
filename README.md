@@ -6,7 +6,7 @@ This simple restaurant website is generated only by JavaScript's DOM manipulatio
 
 ## Live Demo
 
-[Check Quark's bar]()
+[Check Quark's bar](https://1v4n4.github.io/Quark-s-bar/)
 
 ## Built With
 
