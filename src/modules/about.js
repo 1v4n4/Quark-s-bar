@@ -18,7 +18,7 @@ const makeAboutCard = (title, text) => {
 
   aboutCardBody.appendChild(aboutCardText);
   return aboutCardBody;
-}
+};
 
 const makeAbout = () => {
   const aboutContainer = document.createElement('div');
@@ -41,6 +41,6 @@ const makeAbout = () => {
   aboutCardContainer.appendChild(makeAboutCard('Holosuites', 'The upper levels of Quark\'s are reserved for holosuites often used for adult entertainment, but also a more benign recreation. Credit for use of the holosuites could be purchased at the bar, as could many enticing holographic programs. The holosuites are often used by visitors for programs of an adult nature, while residents of the station and members of its crew use them for more benign recreations like kayaking or recreating old Earth battles.'));
 
   mother.appendChild(aboutContainer);
-}
+};
 
 export default makeAbout;

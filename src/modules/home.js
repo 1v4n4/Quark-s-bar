@@ -42,6 +42,6 @@ const makeMain = () => {
   main.appendChild(quoteDiv);
 
   mother.appendChild(main);
-}
+};
 
 export default makeMain;

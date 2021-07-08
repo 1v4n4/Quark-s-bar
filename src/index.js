@@ -12,7 +12,7 @@ const makeLink = () => {
   const linkText = document.createTextNode('1v4n4');
   link.appendChild(linkText);
   return link;
-}
+};
 
 const makeFooter = () => {
   const footer = document.createElement('footer');
@@ -80,6 +80,6 @@ const homeToDom = () => {
   MakeHeader();
   makeMain();
   makeFooter();
-}
+};
 
 document.addEventListener('DOMContentLoaded', homeToDom());

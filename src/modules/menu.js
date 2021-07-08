@@ -42,6 +42,6 @@ const makeMenu = () => {
   cardContainer.appendChild(makeCard('./images/tongue.png', 'Haligian tongue sauce', 'Quark created a chocolate soufflé with Haligian tongue sauce after Cardassia signed a peace treaty with Bajor. He named it in honor of the Bajoran religious leader, Kai Winn.'));
   cardContainer.appendChild(makeCard('./images/sand.png', 'Gramilian sand pea', 'An edible seed that is served as a snack. Goes well with drinks and it can be eaten with a Cardassian delicacy yamok sauce.'));
   mother.appendChild(cardContainer);
-}
+};
 
 export default makeMenu;
