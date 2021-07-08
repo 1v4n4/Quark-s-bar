@@ -1,8 +1,6 @@
-
-const mother= document.getElementById("content");
+const mother = document.getElementById('content');
 
 function makeAboutCard(title, text) {
-
   const aboutCardBody = document.createElement('div');
   aboutCardBody.className = 'col-12';
 
@@ -37,10 +35,10 @@ function makeAbout() {
 
   aboutContainer.appendChild(aboutCardContainer);
 
-  aboutCardContainer.appendChild(makeAboutCard('Reputation','Quark\'s Bar, Grill, Embassy, Gaming House, and Holosuite Arcade is an establishment owned by the Ferengi Quark on the Promenade of Deep Space 9 with the cooperation of the government of the Ferengi Alliance. Quark\'s bar is open 26 hours a day and it is one of the major social locations on DS9 with food and drink, including a buffet, gambling, and holosuites.'));
-  aboutCardContainer.appendChild(makeAboutCard('Food and drink','A range of foods and beverages is served at Quark\'s. Most of the food was replicated, while the drinks were either replicated or came fresh from bottles kept behind the bar. Quark also kept a private stock of drinks, which included Maraltian Seev-ale and Aldebaran whiskey. The quality of this food is well known and Quark is often hired to cater events and meetings on the space station, particularly in the wardroom, where he provided food and drinks together with waiter service.'));
-  aboutCardContainer.appendChild(makeAboutCard('Gaming','A casino accepts both gold-pressed latinum and gambling tokens as gaming tender. Many gaming tables are located on Level 1, and the most prominent is dabo.  Games of tongo are also played, the dartboard is installed upon request of Humans, and among other games are chula, dom-jot, prayko alleys...'));
-  aboutCardContainer.appendChild(makeAboutCard('Holosuites','The upper levels of Quark\'s are reserved for holosuites often used for adult entertainment, but also a more benign recreation. Credit for use of the holosuites could be purchased at the bar, as could many enticing holographic programs. The holosuites are often used by visitors for programs of an adult nature, while residents of the station and members of its crew use them for more benign recreations like kayaking or recreating old Earth battles.'));
+  aboutCardContainer.appendChild(makeAboutCard('Reputation', 'Quark\'s Bar, Grill, Embassy, Gaming House, and Holosuite Arcade is an establishment owned by the Ferengi Quark on the Promenade of Deep Space 9 with the cooperation of the government of the Ferengi Alliance. Quark\'s bar is open 26 hours a day and it is one of the major social locations on DS9 with food and drink, including a buffet, gambling, and holosuites.'));
+  aboutCardContainer.appendChild(makeAboutCard('Food and drink', 'A range of foods and beverages is served at Quark\'s. Most of the food was replicated, while the drinks were either replicated or came fresh from bottles kept behind the bar. Quark also kept a private stock of drinks, which included Maraltian Seev-ale and Aldebaran whiskey. The quality of this food is well known and Quark is often hired to cater events and meetings on the space station, particularly in the wardroom, where he provided food and drinks together with waiter service.'));
+  aboutCardContainer.appendChild(makeAboutCard('Gaming', 'A casino accepts both gold-pressed latinum and gambling tokens as gaming tender. Many gaming tables are located on Level 1, and the most prominent is dabo.  Games of tongo are also played, the dartboard is installed upon request of Humans, and among other games are chula, dom-jot, prayko alleys...'));
+  aboutCardContainer.appendChild(makeAboutCard('Holosuites', 'The upper levels of Quark\'s are reserved for holosuites often used for adult entertainment, but also a more benign recreation. Credit for use of the holosuites could be purchased at the bar, as could many enticing holographic programs. The holosuites are often used by visitors for programs of an adult nature, while residents of the station and members of its crew use them for more benign recreations like kayaking or recreating old Earth battles.'));
 
   mother.appendChild(aboutContainer);
 }
