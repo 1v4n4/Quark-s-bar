@@ -1,0 +1,39 @@
+header {
+  height: 20vh;
+  width: 100%;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+}
+
+.homeDiv {
+
+  height: 66vh;
+  background-image: url('./images/bar.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  -webkit-text-stroke: 2px #1D2E0E;
+}
+
+.quark {
+  height: 25vh;
+}
+
+.quote {
+  width: 25vh;
+}
+
+.link-unstyled {
+  text-decoration: none;
+}
+
+.card-width {
+  width: 18rem;
+}
