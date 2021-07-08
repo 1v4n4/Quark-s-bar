@@ -1,20 +1,11 @@
-
-
 header {
-  height: 14vh;
-
+  height: 20vh;
   width: 100%;
 }
 
 footer {
   height: 10vh;
   width: 100%;
-}
-
-body {
-  height: 100vh;
-
-
 }
 
 .homeDiv {
@@ -29,7 +20,6 @@ h1 {
   font-size: 5rem;
   font-weight: 900;
   -webkit-text-stroke: 2px #1D2E0E;
-
 }
 
 .quark {

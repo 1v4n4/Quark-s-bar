@@ -34,7 +34,7 @@ const makeFooter = () => {
 const MakeTab = (name, id) => {
   const tab = document.createElement('button');
   tab.setAttribute('id', id);
-  tab.className = 'btn btn-dark m-3 text-warning fw-bold active fs-2';
+  tab.className = 'btn btn-dark mx-3 my-4 text-warning fw-bold active fs-2';
   const tabText = document.createTextNode(name);
   tab.appendChild(tabText);
   return tab;
@@ -42,7 +42,7 @@ const MakeTab = (name, id) => {
 
 const MakeHeader = () => {
   const header = document.createElement('header');
-  header.classList.add('d-flex', 'bg-dark', 'justify-content-center', 'p-2');
+  header.classList.add('d-flex', 'pt-5', 'bg-dark', 'justify-content-center', 'p-2');
   header.appendChild(MakeTab('Home', 'home'));
   header.appendChild(MakeTab('Menu', 'menu'));
   header.appendChild(MakeTab('About', 'about'));

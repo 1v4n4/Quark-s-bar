@@ -3,7 +3,7 @@ const mother = document.getElementById('content');
 const makeMain = () => {
   // Main picture div
   const homeDiv = document.createElement('div');
-  homeDiv.className = 'homeDiv container-md pt-5';
+  homeDiv.className = 'homeDiv container-md my-5 pt-5';
   const h1 = document.createElement('h1');
   h1.className = 'text-center text-warning mb-4 mt-3';
   const h1Text = document.createTextNode("Quark's Bar");
