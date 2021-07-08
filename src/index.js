@@ -5,7 +5,7 @@ import makeAbout from './modules/about';
 const mother = document.getElementById('content');
 mother.className = 'bg-dark';
 
-function makeLink() {
+const makeLink = () => {
   const link = document.createElement('a');
   link.href = 'https://github.com/1v4n4';
   link.className = 'text-warning';
@@ -76,7 +76,7 @@ const MakeHeader = () => {
   });
 };
 
-function homeToDom() {
+const homeToDom = () => {
   MakeHeader();
   makeMain();
   makeFooter();

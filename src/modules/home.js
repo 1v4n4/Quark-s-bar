@@ -1,6 +1,6 @@
 const mother = document.getElementById('content');
 
-function makeMain() {
+const makeMain = () => {
   // Main picture div
   const homeDiv = document.createElement('div');
   homeDiv.className = 'homeDiv container-md pt-5';

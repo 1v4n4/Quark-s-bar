@@ -1,6 +1,6 @@
 const mother = document.getElementById('content');
 
-function makeAboutCard(title, text) {
+const makeAboutCard = (title, text) => {
   const aboutCardBody = document.createElement('div');
   aboutCardBody.className = 'col-12';
 
@@ -20,7 +20,7 @@ function makeAboutCard(title, text) {
   return aboutCardBody;
 }
 
-function makeAbout() {
+const makeAbout = () => {
   const aboutContainer = document.createElement('div');
   aboutContainer.className = 'container-md d-flex gap-5 my-5';
 

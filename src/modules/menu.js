@@ -32,7 +32,7 @@ const makeCard = (src, title, text) => {
   return card;
 };
 
-function makeMenu() {
+const makeMenu = () => {
   const cardContainer = document.createElement('article');
   cardContainer.className = 'container-md d-flex flex-wrap justify-content-center';
   cardContainer.appendChild(makeCard('./images/pudding.jpg', 'I\'danian spice pudding', 'A rich and delicious dessert, white with a creme top, a favorite at the Replimat on Deep Space 9\'s Promenade.'));
