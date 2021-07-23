@@ -10,8 +10,8 @@ This simple restaurant website is generated only by JavaScript's DOM manipulatio
 
 ## Built With
 
-  Javascript
-  Bootstrap
+  - Javascript
+  - Bootstrap
 
 ## Getting Started
 
